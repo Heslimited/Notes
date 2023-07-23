@@ -1,22 +1,23 @@
 <template>
     <header>
         <div class='v-head-con'>
-            <div class="v-head-logo">
+            <nav class="v-head-logo">
                 <a class="header-logo-link" href="/">
                     <HeaderLogo />
                     <p>JustNotes</p>
                 </a>
-            </div>
-            <div class='v-head-right-con'>
-                <a class='header-link' href='/login'>
-                    <p>Войти</p>
+            </nav>
+            <nav class='v-head-right-con'>
+                <a class='sign-in' href='/login'>
+                    <p>Sign in</p>
                 </a>
-                <a class='header-link' href='/reg'>
-                    <p>Зарегистрироваться</p>
+                <a class='sign-up' href='/reg'>
+                    <p>Register</p>
                 </a>
-            </div>
+            </nav>
         </div>
     </header>
+    <router-view></router-view>
 </template>
 
 <script setup>
@@ -29,29 +30,36 @@ import HeaderLogo from '../assets/icons/HeaderLogo.vue'
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5% 30% 0.5% 30%;
-    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+    padding: 0.5% 28% 0.5% 28%;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
 }
 .v-head-logo{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    font-size: 42pt;
+    justify-content: center;
+    font-size: 36pt;
     font-weight: 600;
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Limelight', cursive;
+}
+.header-logo-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 .v-head-right-con{
     display: flex;
-    font-size: 16pt;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     justify-content: space-between;
     align-items: center;
-    gap: 35px;
+    gap: 10px;
     background-color: transparent;
     transition: background-color 0.3s;
 }
-
-a.header-link:link, a.header-link:visited, a.header-link:hover, a.header-link:focus, a.header-link:active {
+a.sign-up:link, a.sign-up:visited, a.sign-up:hover, a.sign-up:focus, a.sign-up:active {
+    color: white;
+    text-decoration: none;
+}
+a.sign-in:link, a.sign-in:visited, a.sign-in:hover, a.sign-in:focus, a.sign-in:active {
   color: #000000;
   text-decoration: none;
 }
@@ -59,14 +67,38 @@ a.header-logo-link:link, a.header-logo-link:visited, a.header-logo-link:hover, a
   color: #000000;
   text-decoration: none;
   display: flex;
-  gap: 10px;
+
 }
-.header-link{
+.sign-in{
     padding: 10px;
+    color: #222222;
+    font-weight: 600;
+    font-style: normal;
+    font-family: "Inter", sans-serif;
+    color: #666666;
+    font-size: 16px;  
 }
-.header-link:hover{
-    background-color: rgba(88, 115, 134, 0.5);
+.sign-in:hover{
+    background-color: rgba(0, 0, 0, 0.5);
     transition: background-color 0.3s;
     border-radius: 6px;
+}
+.sign-up{
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #222222;
+    position: relative;
+    font-weight: 600;
+    font-style: normal;
+    font-family: "Inter", sans-serif;
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+}
+.sign-up:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s;
+    border-radius: 6px;
+    color: white
 }
 </style>
