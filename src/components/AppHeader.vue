@@ -17,7 +17,6 @@
             </nav>
         </div>
     </header>
-    <router-view></router-view>
 </template>
 
 <script setup>

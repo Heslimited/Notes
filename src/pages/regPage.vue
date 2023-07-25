@@ -1,24 +1,21 @@
 <template>
     <AppHeader />
-    <div class="main-container">
-        Hello
-    </div>
+    <RegPageComponent />
 </template>
 
 <script>
   import AppHeader from '../components/AppHeader.vue'
+  import RegPageComponent from '../components/regPageComponent.vue'
   
   export default {
     name: 'regPage',
     components: {
-      AppHeader
+      AppHeader,
+      RegPageComponent
     }
   }
 </script>
 
 <style>
-.main-container{
-    background-color: rgba(198, 197, 185, 0.5);
-    height: 100vh;
-}
+
 </style>
