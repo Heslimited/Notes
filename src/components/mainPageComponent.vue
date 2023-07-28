@@ -104,7 +104,7 @@ export default {
     justify-content: center;
     flex-direction: column;
     font-family: 'Limelight', cursive;
-    width: 1200px;
+    width: 60%;
     background-color: #D4A373;
     gap: 20px;
     padding-bottom: 100px;
@@ -112,7 +112,8 @@ export default {
 
 .container h1 {
     color: #000000;
-    font-size: 36px;
+    font-size: 16px;
+    font-size: 6vh;
     font-weight: 400;
     text-align: center;
     gap: 20px;
@@ -229,7 +230,7 @@ a.sign-up-button:active {
 
 .first-land-container {
     background-color: #000000;
-    width: 1200px;
+    width: 60%;
 }
 
 .v-land-first-con {
@@ -238,12 +239,14 @@ a.sign-up-button:active {
     gap: 20px;
     justify-content: center;
     align-items: center;
-    margin: 100px;
+    margin: 6%;
 }
 
 .v-land-first-con img {
-    height: 490px;
+    height: 50vh;
+    object-fit: cover;
     border-radius: 40px;
+    max-height: 490px;
 }
 
 .v-land-first-con h2 {
@@ -251,9 +254,10 @@ a.sign-up-button:active {
     font-style: normal;
     font-family: "Limelight", cursive;
     color: #ccd5ae;
-    font-size: 32px;
-    letter-spacing: 0em;
+    font-size: 16px;
+    font-size: 4vh;
     line-height: 1.5;
+    width: 300px;
 }
 
 .v-land-first-con p {
@@ -266,26 +270,29 @@ a.sign-up-button:active {
     font-family: 'Schibsted Grotesk', sans-serif;
     color: #ccd5ae;
     font-size: 16px;
-    letter-spacing: 0em;
+    font-size: 2.5vh;
     line-height: 1.5;
     text-align: left;
 }
 
 .second-land-container {
     background-color: #000000;
-    width: 1200px;
+    width: 60%;
     border-top: white 1px solid;
 }
 
 .second-land-container img {
-    height: 490px;
     border-radius: 40px;
+    height: 50vh;
+    object-fit: cover;
+    max-height: 490px;
+    margin-right: 50px;
 }
 
 .v-land-second-con {
     color: #D4A373;
     gap: 20px;
-    margin: 100px;
+    margin: 6%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -297,13 +304,11 @@ a.sign-up-button:active {
     font-style: normal;
     font-family: "Limelight", cursive;
     color: #D4A373;
-    font-size: 32px;
-    letter-spacing: 0em;
+    font-size: 4vh;
     line-height: 1.5;
 }
 
 .v-land-second-con p {
-    max-width: 300px;
     overflow: visible;
     flex: 1 0 0px;
     position: relative;
@@ -311,20 +316,19 @@ a.sign-up-button:active {
     font-style: normal;
     font-family: 'Schibsted Grotesk', sans-serif;
     color: #D4A373;
-    font-size: 16px;
-    letter-spacing: 0em;
+    font-size: 2.5vh;
     line-height: 1.5;
     text-align: left;
 }
 
 .con2 {
-    margin-top: 100px;
+    margin-top: 6%;
     display: flex;
 }
 
 .third-land-container {
     background-color: #000000;
-    width: 1200px;
+    width: 60%;
     border-bottom: 1px solid white;
 }
 
@@ -333,12 +337,15 @@ a.sign-up-button:active {
     display: flex;
     justify-content: center;
     align-self: center;
-    margin: 100px;
+    margin: 6%;
 }
 
 .third-land-container img {
     height: 490px;
     border-radius: 40px;
+    height: 50vh;
+    object-fit: cover;
+    max-height: 490px;
 }
 
 .v-land-third-con {
@@ -356,8 +363,8 @@ a.sign-up-button:active {
     font-style: normal;
     font-family: "Limelight", cursive;
     color: #D4A373;
-    font-size: 32px;
-    letter-spacing: 0em;
+    font-size: 16px;
+    font-size: 4vh;
     line-height: 1.5;
 }
 
@@ -371,18 +378,18 @@ a.sign-up-button:active {
     font-family: 'Schibsted Grotesk', sans-serif;
     color: #D4A373;
     font-size: 16px;
-    letter-spacing: 0em;
+    font-size: 2.5vh;
     line-height: 1.5;
     text-align: left;
 }
 
 .fourth-land-container {
     background-color: #000000;
-    width: 1200px;
+    width: 60%;
 }
 
 .con4{
-    margin: 100px;
+    margin: 6%;
 }
 
 .fourth-land-container h2 {
@@ -390,18 +397,19 @@ a.sign-up-button:active {
     font-style: normal;
     font-family: "Limelight", sans-serif;
     color: #faedcd;
-    font-size: 48px;
-    letter-spacing: 0em;
+    font-size: 16px;
+    font-size: 6vh;
     line-height: 1.2;
     text-align: left;
 }
 
 .fourth-land-container h3 {
-    font-weight: 700;
+    font-weight: 900;
     font-style: normal;
     font-family: 'Schibsted Grotesk', sans-serif;
     color: #faedcd;
-    font-size: 20px;
+    font-size: 16px;
+    font-size: 3vh;
     letter-spacing: -0.025em;
     line-height: 1.5;
     text-align: left;
@@ -413,7 +421,7 @@ a.sign-up-button:active {
     font-family: 'Schibsted Grotesk', sans-serif;
     color: #e9edc9;
     font-size: 16px;
-    letter-spacing: 0em;
+    font-size: 2.5vh;
     line-height: 1.5;
     text-align: left;
 }

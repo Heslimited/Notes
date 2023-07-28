@@ -28,8 +28,8 @@ import HeaderLogo from '../assets/icons/HeaderLogo.vue'
 .v-head-con{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0.5% 28% 0.5% 28%;
+    justify-content: space-around;    
+    padding: 0.5% 0% 0.5% 0%;
     box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
 }
 .v-head-logo{
