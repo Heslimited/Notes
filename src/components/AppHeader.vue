@@ -75,7 +75,7 @@ a.header-logo-link:link, a.header-logo-link:visited, a.header-logo-link:hover, a
     font-style: normal;
     font-family: "Inter", sans-serif;
     color: #666666;
-    font-size: 16px;  
+    font-size: 2.5vh;
 }
 .sign-in:hover{
     background-color: rgba(0, 0, 0, 0.5);
@@ -91,7 +91,7 @@ a.header-logo-link:link, a.header-logo-link:visited, a.header-logo-link:hover, a
     font-style: normal;
     font-family: "Inter", sans-serif;
     color: #ffffff;
-    font-size: 14px;
+    font-size: 2.25vh;
     text-align: center;
 }
 .sign-up:hover{

@@ -121,14 +121,12 @@ export default {
 }
 
 .container p {
-    flex-shrink: 0;
-    width: 411px;
-    max-width: 100%;
+    max-width: 60%;
     font-weight: 400;
     font-style: normal;
     font-family: 'Schibsted Grotesk', sans-serif;
     color: #000000;
-    font-size: 16px;
+    font-size: 2.5vh;
     line-height: 1.5;
     text-align: center;
 }
@@ -240,6 +238,7 @@ a.sign-up-button:active {
     justify-content: center;
     align-items: center;
     margin: 6%;
+    gap: 20px;
 }
 
 .v-land-first-con img {
@@ -247,6 +246,11 @@ a.sign-up-button:active {
     object-fit: cover;
     border-radius: 40px;
     max-height: 490px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 10%;
 }
 
 .v-land-first-con h2 {
@@ -257,11 +261,10 @@ a.sign-up-button:active {
     font-size: 16px;
     font-size: 4vh;
     line-height: 1.5;
-    width: 300px;
+    gap: 20px;
 }
 
 .v-land-first-con p {
-    max-width: 300px;
     overflow: visible;
     flex: 1 0 0px;
     position: relative;
@@ -324,6 +327,8 @@ a.sign-up-button:active {
 .con2 {
     margin-top: 6%;
     display: flex;
+    justify-content: center;
+    align-self: center;
 }
 
 .third-land-container {
@@ -341,7 +346,6 @@ a.sign-up-button:active {
 }
 
 .third-land-container img {
-    height: 490px;
     border-radius: 40px;
     height: 50vh;
     object-fit: cover;
@@ -369,7 +373,6 @@ a.sign-up-button:active {
 }
 
 .v-land-third-con p {
-    max-width: 300px;
     overflow: visible;
     flex: 1 0 0px;
     position: relative;

@@ -1,7 +1,7 @@
 <template>
     <footer class="v-footer">
         <div class="footer-container">
-            <h3>© 2023 NoteMaster. All Rights Reserved.</h3>
+            <h3>© 2023 JustNotes. All Rights Reserved.</h3>
         </div>
     </footer>
 </template>
@@ -18,8 +18,11 @@
     justify-content: flex-start;
     align-items: center;
     margin: auto;
+    padding-top: 10px;
     width: 60%;
+    border-top: 1px gray solid;
 }
+
 .footer-container h3{
     margin: 6%;
 }
