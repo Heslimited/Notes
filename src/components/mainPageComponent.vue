@@ -20,7 +20,7 @@
             </div>
         </div>
         <div class="first-land-container">
-            <div class="v-land-first-con">
+            <div class="con1">
                 <div>
                     <img src="../assets/1.png" alt="Notes image 1">
                     <h2>Hassle-free Editing</h2>
@@ -126,7 +126,7 @@ export default {
     font-style: normal;
     font-family: 'Schibsted Grotesk', sans-serif;
     color: #000000;
-    font-size: 2.5vh;
+    font-size: 2vh;
     line-height: 1.5;
     text-align: center;
 }
@@ -134,15 +134,9 @@ export default {
 .nav-container {
     display: flex;
     gap: 10px;
-    position: relative;
-    display: flex;
-    align-items: flex-start;
 }
 
 .sign-up-button {
-    display: inline-block;
-    font-size: 14px;
-    font-family: 'Schibsted Grotesk', sans-serif;
     border-radius: 6px;
     padding: 10px;
     color: #CCD5AE;
@@ -151,8 +145,12 @@ export default {
     font-weight: 600;
     font-style: normal;
     font-family: "Inter", sans-serif;
+    font-size: 1.5vh;
     text-align: center;
-    
+    height: 3.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .sign-up-button:hover {
@@ -172,39 +170,38 @@ a.sign-up-button:active {
 }
 
 .expand-button {
-    width: 100px;
-    height: 34px;
-    display: inline-block;
-    font-size: 14px;
-    font-family: 'Schibsted Grotesk', sans-serif;
+    height: 3.5vh;
     border-radius: 6px;
-    padding: 8px;
+    padding: 10px;
     background-color: #E9EDC9;
     font-weight: 600;
     font-style: normal;
     font-family: "Inter", sans-serif;
-    text-align: center;
-    cursor: pointer;
+    font-size: 1.5vh;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
     transition: height 0.25s;
     text-align: center;
-    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .expand-button:hover {
-    height: 45px;
+    height: 4.5vh;
+    transition: all 1s;
 }
 
 .button-text {
     display: block;
-    transition: transform 0.3s;
-    transition: all 0.5s;
+    transition: transform 1s;
+    transition: all 1s;
 }
 
 .expand-button:hover .button-text {
     transform: translateY(-20%);
-    transition: all 0.5s;
+    transition: all 1s;
 }
 
 .arrow-down {
@@ -219,6 +216,7 @@ a.sign-up-button:active {
     border-top: 5px solid #000000;
     transition: opacity 0.3s, transform 0.3s;
     opacity: 0;
+    font-size: 1.5vh;
 }
 
 .expand-button:hover .arrow-down {
@@ -231,51 +229,41 @@ a.sign-up-button:active {
     width: 60%;
 }
 
-.v-land-first-con {
+.con1 {
     color: #CCD5AE;
     display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
+    gap: 2%;
     margin: 6%;
-    gap: 20px;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.v-land-first-con img {
-    height: 50vh;
-    object-fit: cover;
+.con1 img {
+    min-height: 20vh;
+    max-height: 40vh;
+    min-width: 20vh;
+    max-width: 40vh;
     border-radius: 40px;
-    max-height: 490px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
     margin-bottom: 10%;
 }
 
-.v-land-first-con h2 {
+.con1 h2 {
     font-weight: 400;
     font-style: normal;
     font-family: "Limelight", cursive;
     color: #ccd5ae;
-    font-size: 16px;
-    font-size: 4vh;
+    font-size: 3vh;
     line-height: 1.5;
-    gap: 20px;
 }
 
-.v-land-first-con p {
-    overflow: visible;
-    flex: 1 0 0px;
-    position: relative;
+.con1 p {
     font-weight: 400;
     font-style: normal;
     font-family: 'Schibsted Grotesk', sans-serif;
     color: #ccd5ae;
-    font-size: 16px;
-    font-size: 2.5vh;
+    font-size: 2vh;
     line-height: 1.5;
-    text-align: left;
 }
 
 .second-land-container {
@@ -284,22 +272,28 @@ a.sign-up-button:active {
     border-top: white 1px solid;
 }
 
+.con2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 6% 6% 0% 6%;
+    gap: 2%;
+}
+
 .second-land-container img {
     border-radius: 40px;
-    height: 50vh;
     object-fit: cover;
-    max-height: 490px;
-    margin-right: 50px;
+    min-height: 20vh;
+    max-height: 40vh;
+    min-width: 20vh;
+    max-width: 40vh;
 }
 
 .v-land-second-con {
     color: #D4A373;
-    gap: 20px;
-    margin: 6%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-self: center;
+    text-align: center;
 }
 
 .v-land-second-con h2 {
@@ -307,28 +301,17 @@ a.sign-up-button:active {
     font-style: normal;
     font-family: "Limelight", cursive;
     color: #D4A373;
-    font-size: 4vh;
+    font-size: 3vh;
     line-height: 1.5;
 }
 
 .v-land-second-con p {
-    overflow: visible;
-    flex: 1 0 0px;
-    position: relative;
     font-weight: 400;
     font-style: normal;
     font-family: 'Schibsted Grotesk', sans-serif;
     color: #D4A373;
-    font-size: 2.5vh;
     line-height: 1.5;
-    text-align: left;
-}
-
-.con2 {
-    margin-top: 6%;
-    display: flex;
-    justify-content: center;
-    align-self: center;
+    font-size: 2vh;
 }
 
 .third-land-container {
@@ -338,24 +321,25 @@ a.sign-up-button:active {
 }
 
 .con3 {
-    margin-top: 60px;
     display: flex;
-    justify-content: center;
-    align-self: center;
-    margin: 6%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 6% 6% 6% 6%;
+    gap: 2%;
+    text-align: center;
 }
 
 .third-land-container img {
     border-radius: 40px;
-    height: 50vh;
     object-fit: cover;
-    max-height: 490px;
+    min-height: 20vh;
+    max-height: 40vh;
+    min-width: 20vh;
+    max-width: 40vh;
 }
 
 .v-land-third-con {
     color: #D4A373;
-    gap: 20px;
-    margin-left: 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -367,8 +351,7 @@ a.sign-up-button:active {
     font-style: normal;
     font-family: "Limelight", cursive;
     color: #D4A373;
-    font-size: 16px;
-    font-size: 4vh;
+    font-size: 3vh;
     line-height: 1.5;
 }
 
@@ -380,10 +363,8 @@ a.sign-up-button:active {
     font-style: normal;
     font-family: 'Schibsted Grotesk', sans-serif;
     color: #D4A373;
-    font-size: 16px;
-    font-size: 2.5vh;
+    font-size: 2vh;
     line-height: 1.5;
-    text-align: left;
 }
 
 .fourth-land-container {
@@ -392,7 +373,7 @@ a.sign-up-button:active {
 }
 
 .con4{
-    margin: 6%;
+    margin: 6% 6% 6% 6%;
 }
 
 .fourth-land-container h2 {
@@ -400,8 +381,7 @@ a.sign-up-button:active {
     font-style: normal;
     font-family: "Limelight", sans-serif;
     color: #faedcd;
-    font-size: 16px;
-    font-size: 6vh;
+    font-size: 3.5vh;
     line-height: 1.2;
     text-align: left;
 }
@@ -412,7 +392,7 @@ a.sign-up-button:active {
     font-family: 'Schibsted Grotesk', sans-serif;
     color: #faedcd;
     font-size: 16px;
-    font-size: 3vh;
+    font-size: 2.25vh;
     letter-spacing: -0.025em;
     line-height: 1.5;
     text-align: left;
@@ -424,7 +404,7 @@ a.sign-up-button:active {
     font-family: 'Schibsted Grotesk', sans-serif;
     color: #e9edc9;
     font-size: 16px;
-    font-size: 2.5vh;
+    font-size: 2vh;
     line-height: 1.5;
     text-align: left;
 }

@@ -75,7 +75,12 @@ a.header-logo-link:link, a.header-logo-link:visited, a.header-logo-link:hover, a
     font-style: normal;
     font-family: "Inter", sans-serif;
     color: #666666;
-    font-size: 2.5vh;
+    font-size: 1.5vh;
+    height: 3.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 .sign-in:hover{
     background-color: rgba(0, 0, 0, 0.5);
@@ -91,8 +96,12 @@ a.header-logo-link:link, a.header-logo-link:visited, a.header-logo-link:hover, a
     font-style: normal;
     font-family: "Inter", sans-serif;
     color: #ffffff;
-    font-size: 2.25vh;
+    font-size: 1.5vh;
     text-align: center;
+    height: 3.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .sign-up:hover{
     background-color: rgba(0, 0, 0, 0.5);
