@@ -1,15 +1,14 @@
 <template>
-    <AppHeader />
-
+  <LoginPageComponent />
 </template>
 
 <script>
-  import AppHeader from '../components/AppHeader.vue'
-  
+  import LoginPageComponent from '../components/loginPageComponent.vue';
+
   export default {
     name: 'loginPage',
     components: {
-      AppHeader
+      LoginPageComponent
     }
   }
 </script>
