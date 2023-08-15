@@ -1,3 +1,199 @@
+<!-- <template>
+  <modal
+    name="auth-modal"
+    classes="auth-modal"
+    height="350px"
+    width="500px"
+    @before-close="close"
+  >
+    <form @submit.prevent="formSubmit">
+      <h3>{{ isSignInForm ? 'Войти' : 'Зарегистрироваться' }}</h3>
+      <label>
+        Email
+        <input
+          type="text"
+          placeholder="Ваша эл. почта"
+          v-model="form.email"
+        >
+      </label>
+      <label>
+        Пароль
+        <input
+          type="password"
+          placeholder="Ваш пароль"
+          v-model="form.password"
+        >
+      </label>
+      <div class="actions">
+        <a
+          href="#"
+          @click.prevent="mode = isSignInForm ? 'signUp' : 'signIn'"
+        >
+          {{ isSignInForm ? 'Регистрация' : 'Вход' }}
+        </a>
+        <button type="button" @click="$emit('close')">Отмена</button>
+        <button type="submit">Подтвердить</button>
+      </div>
+    </form>
+  </modal>
+</template>
+
+<script>
+export default {
+  name: 'auth-modal',
+  data() {
+    return {
+      mode: 'signIn',
+      form: {
+        email: '',
+        password: '' 
+      },
+      errors: []
+    }
+  },
+  computed: {
+    isSignInForm() {
+      return this.mode === 'signIn'
+    }
+  },
+  mounted () {
+    this.$modal.show('auth-modal')
+  },
+  methods: {
+    changeUserState() {
+      if (this.auth) {
+        localStorage.removeItem('auth')
+        this.$router.push({ name: 'main'})
+      } else {
+        localStorage.setItem('auth', true)
+        this.auth = true
+      }
+    },
+    close() {
+      this.$emit('close')
+    },
+    formSubmit() {
+      if (this.isSignInForm) {
+        this.signIn()
+      } else {
+        this.signUp()
+      }
+    },
+    signIn() {
+      this.$load(async() => {
+        const data = (await this.$api.auth.signIn({
+          email: this.form.email,
+          password: this.form.password
+        })).data
+        localStorage.setItem('user', JSON.stringify(data))
+        this.$store.dispatch('user/setUser', data)
+        this.$emit('close')
+      })
+    },
+    signUp() {
+      this.$load(async() => {
+        const data = (await this.$api.auth.signUp({
+          email: this.form.email,
+          password: this.form.password
+        })).data
+        localStorage.setItem('user', JSON.stringify(data))
+        this.$store.dispatch('user/setUser', data)
+        this.$emit('close')
+      })
+    }
+  }
+}
+</script>
+
+<style>
+.auth-modal {
+  padding: 30px 40px;
+}
+.auth-modal form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.auth-modal h3 {
+    margin-bottom: 30px;
+}
+
+.auth-modal label {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.actions {
+    margin-top: auto;
+    display: flex;
+    align-items: baseline;
+}
+
+.actions a {
+      color: #EB5804;
+}
+.actions button {
+      width: 130px;
+      margin-left: 10px;
+}
+.actions &:first-of-type {
+      margin-left: auto;
+}
+</style> -->
+
+<!-- <template>
+  <div class="container">
+    <h1>Register</h1>
+    <form action="/register" method="post">
+      <input type="email" v-model="email" placeholder="Email">
+      <input type="text" v-model="username" placeholder="Username">
+      <input type="password" v-model="password" placeholder="Password">
+      <input type="password" v-model="confirmPassword" placeholder="Confirm Password">
+      <button type="submit" class="btn btn-primary">Register</button>
+      <a href="/login" class="btn btn-link">Login</a>
+    </form>
+  </div>
+</template>
+
+<script>
+import axios from 'axios';
+import { ref } from 'vue';
+
+export default {
+  data() {
+    return {
+      email: ref(''),
+      username: ref(''),
+      password: ref(''),
+      confirmPassword: ref(''),
+      errors: ref({})
+    }
+  },
+  methods: {
+    register() {
+      const { email, username, password, confirmPassword } = this;
+      axios.post('/register', {
+        email,
+        username,
+        password,
+        confirmPassword
+      }).then(response => {
+        if (response.status === 200) {
+          // Redirect to the login page
+          window.location.href = '/login';
+        } else {
+          // Handle errors
+          this.errors.value = response.data.errors;
+        }
+      }).catch(error => {
+        // Handle errors
+        this.errors.value = error.response.data.errors;
+      });
+    }
+  }
+}
+</script> -->
+
 <template>
   <div class="register-page-container">
     <div class="register-container">
@@ -65,13 +261,14 @@ export default {
       }
       else {
         axios
-          .post('api/register', this.userData)
+          .post('http://localhost:8000/auth/users/', this.userData)
           .then(() => {
             alert('Registration successful!');
           })
           .catch((err) => {
             console.error(err);
             alert('Registration error');
+            console.log(this.userData);
           });
       }
     }
